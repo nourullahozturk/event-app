@@ -17,6 +17,36 @@
   color: rgb(32, 32, 32, 0.5);
 }
 
+.event-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.hero-image {
+}
+
+.other-images {
+  height: 9.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.other-image {
+  outline: 1px solid rgba(32, 32, 32, 0.5);
+  outline-offset: 2px;
+  cursor: pointer;
+}
+
+.other-image:hover {
+  outline-color: rgba(32, 32, 32, 0.9);
+}
+
+.img-thumbnail {
+  height: 8rem;
+}
+
 .img-event {
   width: 100%;
 }

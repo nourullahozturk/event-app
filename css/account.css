@@ -34,16 +34,6 @@
   gap: 4.8rem;
 }
 
-.account-nav-link {
-  color: #202020;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.account-nav-link:hover {
-  color: rgba(32, 32, 32, 0.75);
-}
-
 .account-mobile-nav-link {
   color: #000;
   font-size: 2.6rem;
@@ -57,7 +47,7 @@
   background-color: #eae545;
 }
 
-/* .account-nav-link:link,
+.account-nav-link:link,
 .account-nav-link:visited {
   color: #202020;
   text-decoration: none;
@@ -67,7 +57,7 @@
 .account-nav-link:hover,
 .account-nav-link:active {
   color: rgba(32, 32, 32, 0.75);
-} */
+}
 
 /* MAIN */
 
@@ -76,7 +66,8 @@
 }
 
 .account-section,
-.add-event-section .events-section,
+.add-event-section,
+.events-section,
 .applications-section {
   display: flex;
   flex-direction: column;
@@ -138,10 +129,6 @@
   cursor: pointer;
 }
 
-#file-upload {
-  display: none;
-}
-
 .btn--settings {
   padding: 1.6rem 3.2rem;
 }
@@ -175,24 +162,13 @@
   }
 }
 
-/* ACCOUNT SECTION */
-
-.account-section {
-  display: none;
-}
-
 /* ADD EVENT SECTION */
-
-.add-event-section {
-  display: none;
-  flex-direction: column;
-  gap: 6.4rem;
-}
 
 .control-tag-box {
   font-size: 1.46rem;
   line-height: 170%;
   display: grid;
+  align-items: center;
   grid-template-columns: auto 1fr;
   gap: 6.4rem;
 }
@@ -245,6 +221,14 @@
   height: 1.6rem;
 }
 
+.tag--disabled {
+  color: rgba(32, 32, 32, 0.5);
+  border-color: rgba(32, 32, 32, 0.5);
+}
+.tag--disabled .tag-icon {
+  color: rgba(32, 32, 32, 0.5);
+}
+
 .control-textarea {
   height: 25.6rem;
   width: 100%;
@@ -255,6 +239,63 @@
   font-size: inherit;
 }
 
+.radio-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.radio-label {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-btn {
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 100%;
+  border: 2px solid #202020;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-btn::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #202020;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.radio-input:checked ~ .radio-btn::after {
+  opacity: 1;
+}
+
+.form-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn--delete {
+  font-family: inherit;
+  padding: 1.6rem 3.2rem;
+  color: #c5515c;
+  border-color: #c5515c;
+}
+
+.btn--delete:hover {
+  color: #fff;
+  background-color: #c5515c;
+}
+
 @media (max-width: 52em) {
   .control-tag-box {
     grid-template-columns: 1fr;
@@ -262,21 +303,7 @@
   }
 }
 
-/* EVENTS SECTION */
-
-.events-section {
-  display: none;
-  flex-direction: column;
-  gap: 6.4rem;
-}
-
 /* APPLICATIONS SECTION */
-
-.applications-section {
-  display: none;
-  flex-direction: column;
-  gap: 6.4rem;
-}
 
 .applications-box {
   display: flex;

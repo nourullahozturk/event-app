@@ -242,6 +242,13 @@
   line-height: 150%;
 }
 
+.empty-event-list {
+  text-align: center;
+  grid-column: 1 / -1;
+  font-size: 1.95rem;
+  line-height: 170%;
+}
+
 /* QUERIES */
 
 @media (max-width: 75em) {
