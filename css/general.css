@@ -1,0 +1,306 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "TT Travels Medium", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/**************************/
+/* GENERAL REUSABLE COMPONENTS */
+/**************************/
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  column-gap: 3.2rem;
+  row-gap: 6.4rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
+
+.margin-right-md {
+  margin-right: 3.2rem;
+}
+
+.margin-bottom-xsm {
+  margin-bottom: 0.8rem;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 1.6rem;
+}
+
+.margin-bottom-md {
+  margin-bottom: 3.2rem;
+}
+
+.margin-bottom-bg {
+  margin-bottom: 6.4rem;
+}
+
+.align-right-h {
+  text-align: right;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.overflow-y {
+  overflow-y: hidden;
+}
+
+/*****************************************/
+/* HEADER */
+/*****************************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem 9.6rem;
+  border-bottom: 1px solid rgb(32, 32, 32, 0.1);
+  position: relative;
+}
+
+.logo {
+  width: 8rem;
+  height: 8rem;
+}
+
+.left-nav-list,
+.right-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: #000;
+  font-size: 2.6rem;
+  line-height: 150%;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background-color: #eae545;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.profile-img-box {
+  display: block;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.img-profile {
+  width: 100%;
+}
+
+/* MOBILE NAVIGATION */
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.icon-cancel {
+  display: none;
+}
+
+/* QUERIES */
+
+@media (max-width: 75em) {
+  .header {
+    padding: 3.2rem 3.2rem;
+  }
+
+  /* MOBILE NAVIGATION */
+
+  .left-nav,
+  .right-nav {
+    display: none;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  /* Mobil Navigasyon Acildiginda */
+  .nav-open .mobile-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-cancel {
+    display: block;
+  }
+
+  .nav-open .icon-menu {
+    display: none;
+  }
+
+  .nav-open .mobile-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.8rem;
+  }
+}
+
+@media (max-width: 38.75em) {
+  .logo {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .icon-mobile-nav {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+
+/*****************************************/
+/* OTHER COMMON CLASSES */
+/*****************************************/
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(32, 32, 32, 0.1);
+}
+
+.event-tag {
+  padding: 0.2rem 0.8rem;
+  font-size: 1.46rem;
+  line-height: 170%;
+  color: rgb(32, 32, 32, 0.75);
+  border: 1px solid rgb(32, 32, 32, 0.75);
+  border-radius: 100px;
+}
+
+.btn {
+  padding: 0.8rem 4.8rem;
+  font-size: 1.95rem;
+  line-height: 170%;
+  border-radius: 100px;
+  background: none;
+  border: 1px solid #000;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/*****************************************/
+/* FOOTER */
+/*****************************************/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.2rem;
+  font-size: 1.46rem;
+  line-height: 150%;
+  color: rgb(32, 32, 32, 0.75);
+  border-top: 1px solid rgb(32, 32, 32, 0.1);
+}

@@ -1,0 +1,78 @@
+.section-login {
+  padding: 12.8rem 0;
+}
+
+.login-box {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.62rem;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 6.4rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-bottom: 6.4rem;
+  font-size: 1.95rem;
+  line-height: 170%;
+}
+
+.label {
+  display: block;
+  margin-bottom: 1.6rem;
+}
+
+.control-text {
+  height: 6.4rem;
+  width: 100%;
+  padding: 0 1.6rem;
+  background-color: rgba(32, 32, 32, 0.05);
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.btn-auth {
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #202020;
+  font-family: inherit;
+  font-size: 1.95rem;
+  line-height: 170%;
+  padding: 1.6rem;
+  border-radius: 100px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-auth--login {
+  background-color: #202020;
+  color: #fff;
+}
+
+.btn-auth--login:hover {
+  background-color: rgba(32, 32, 32, 0.75);
+}
+
+.btn-auth--register {
+  background-color: #fff;
+  color: #202020;
+}
+
+.btn-auth--register:hover {
+  background-color: #202020;
+  color: #fff;
+}

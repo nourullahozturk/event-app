@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/details.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <nav class="left-nav">
+        <ul class="left-nav-list">
+          <a href="/" class="nav-link">Tüm Etkinlikler</a>
+        </ul>
+      </nav>
+
+      <a href="/">
+        <img src="img/logo.svg" class="logo" alt="" />
+      </a>
+
+      <nav class="right-nav">
+        <!-- If not logged in: -->
+        <!-- <ul class="right-nav-list">
+          <li>
+            <a href="/giris.html" class="nav-link">Giriş</a>
+          </li>
+          <li>
+            <a href="/kayit.html" class="nav-link">Kayıt ol</a>
+          </li>
+        </ul> -->
+        <!-- If logged in: -->
+        <div class="profile">
+          <a href="/account.html" class="profile-img-box">
+            <img src="img/user-2.jpg" class="img-profile" alt="" />
+          </a>
+          <a href="/account.html" class="nav-link">Nurullah</a>
+        </div>
+      </nav>
+
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="/" class="nav-link">Tüm Etkinlikler</a></li>
+          <!-- If not logged in: -->
+          <li><a href="/giris.html" class="nav-link">Giriş</a></li>
+          <li><a href="/kayit.html" class="nav-link">Kayıt ol</a></li>
+          <!-- If logged in: -->
+          <li><a href="/account.html" class="nav-link">Hesabım</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <img src="img/menu.svg" class="icon-mobile-nav icon-menu" alt="" />
+        <img src="img/cancel.svg" class="icon-mobile-nav icon-cancel" alt="" />
+      </button>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="section-details">
+      <div class="container margin-bottom-bg">
+        <h2 class="heading-secondary">Gülmek Yakışır</h2>
+        <p class="date-info">Yayım Tarihi: 22 Haziran 2022</p>
+      </div>
+      <div class="container grid grid--2-cols">
+        <img src="img/etkinlik1.jpg" class="img-event" alt="" />
+        <div class="event">
+          <div class="event-info">
+            <div>
+              <p class="info-title">Tarih ve Zaman</p>
+              <div class="info-box">
+                <img src="img/time.svg" class="info-icon" alt="" />
+                <p class="info-text">18:00</p>
+              </div>
+            </div>
+            <div>
+              <p class="info-title">Etkinlik Konumu</p>
+              <div class="info-box">
+                <img src="img/location-marker.svg" class="info-icon" alt="" />
+                <p class="info-text">Müze Gazhane</p>
+              </div>
+            </div>
+            <div>
+              <p class="info-title">Etkinlik Türü</p>
+              <div class="info-box">
+                <div class="event-tag">Ücretsiz</div>
+                <div class="event-tag">Stand Up</div>
+              </div>
+            </div>
+          </div>
+          <div class="event-description">
+            <p class="info-title">Etkinlik Açıklaması</p>
+            <div class="info-box">
+              <p class="description">
+                Müze Gazhane’nin güldürü serisi Gülmek Yakışır’a bu hafta
+                Mustafa Sağır konuk oluyor!<br /><br />*Etkinliğe katılım için
+                kayıt gerekmemektedir.
+              </p>
+            </div>
+          </div>
+          <button class="btn">Başvur</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">&copy; Nurullah Ozturk 2023</footer>
+    <!-- SCRIPT -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

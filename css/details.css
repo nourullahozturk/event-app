@@ -1,0 +1,101 @@
+/*****************************************/
+/* SECTION DETAILS */
+/*****************************************/
+
+.section-details {
+  padding: 12.8rem 0;
+}
+
+.heading-secondary {
+  font-size: 4.6rem;
+  line-height: 140%;
+}
+
+.date-info {
+  font-size: 1.46rem;
+  line-height: 170%;
+  color: rgb(32, 32, 32, 0.5);
+}
+
+.img-event {
+  width: 100%;
+}
+
+.event {
+  padding: 1rem;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 4.8rem;
+}
+
+.info-title {
+  font-size: 2.6rem;
+  line-height: 150%;
+  margin-bottom: 1rem;
+}
+
+.info-box {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.info-icon {
+  width: 2.4rem;
+}
+
+.info-text {
+  font-size: 1.46rem;
+  line-height: 170%;
+}
+
+.event-description {
+  margin-bottom: 6.4rem;
+}
+
+.description {
+  font-size: 1.95rem;
+  line-height: 170%;
+}
+
+.btn {
+  padding: 0.8rem 4.8rem;
+  font-size: 1.95rem;
+  line-height: 170%;
+  border-radius: 100px;
+  background: none;
+  border: 1px solid #000;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+
+/* 75em = 1200px */
+@media (max-width: 75em) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 25em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .heading-secondary {
+    font-size: 3.47rem;
+  }
+}
